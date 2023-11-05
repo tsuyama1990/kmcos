@@ -70,7 +70,8 @@ actions = [Action(species='empty',coord=center)]
 rate_constant = 'p_COgas*A*bar/sqrt(2*m_CO*umass/beta)' #rate_constant = 'p_COgas*A*bar/sqrt(2*m_CO*umass/beta)*exp(beta*(E_CO-mu_COgas)*eV)'
 # and the otf rate expression
 otf_rate = 'base_rate*exp(beta*nr_CO_1nn*E_CO_nn*eV)'
-
+import pdb
+pdb.set_trace()
 proc = Process(name='CO_desorption',
                 condition_list=conditions,
                 action_list=actions,
@@ -86,4 +87,5 @@ kmc_model.backend = 'otf' #specifying is optional. 'local_smart' is the default.
 kmc_model.clear_model() #This line is optional: if you are updating a model, this line will remove the old model files (including compiled files) before exporting the new one. It is convenient to always include this line because then you don't need to 'confirm' removing/overwriting the old model during the compile step.
 kmc_model.save_model()
 kmcos.compile(kmc_model)
+
 

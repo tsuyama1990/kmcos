@@ -1,0 +1,4 @@
+total number of snapshots = 8
+total number of steps = 96
+total simulation time = 1.703141745327025e-08
+simulation run time (wall clock time) = 0.0018680095672607422

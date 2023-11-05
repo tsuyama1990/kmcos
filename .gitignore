@@ -1,5 +1,8 @@
 # Bit compiled files
 *.pyc
+*.xyz
+*.xml
+*.dat
 
 tags
 dist

@@ -525,10 +525,10 @@ subroutine touchup_simple_cubic_hollow(site)
         call del_proc(CO_desorption, site)
     endif
     select case(get_species(site))
-    case(CO)
-        call add_proc(CO_desorption, site)
     case(empty)
         call add_proc(CO_adsorption, site)
+    case(CO)
+        call add_proc(CO_desorption, site)
     end select
 
 end subroutine touchup_simple_cubic_hollow
